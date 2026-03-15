@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>MedAlert Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">💊 MedAlert</div>
+
+<div class="nav-links">
+
+<a href="home.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="reports.html">Reports</a>
+<a href="contact.html">Contact</a>
+<a href="login.html">Logout</a>
+
+</div>
+<div class="notification-container">
+
+<span id="bell">🔔</span>
+
+<span id="notifCount">0</span>
+
+<div id="notifBox"></div>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD TITLE -->
+
+<h1 class="dash-title">Medicine Dashboard</h1>
+
+<div class="dashboard-container">
+
+<!-- dashboard content -->
+
+</div>
+<!-- SEARCH BAR -->
+
+<div class="search-box">
+
+<input type="text" id="search" placeholder="Search medicine...">
+
+<button onclick="searchMedicine()">Search</button>
+
+</div>
+
+
+<!-- STATISTICS CARDS -->
+
+<div class="stats">
+
+<div class="card">
+
+<h3>Total Medicines</h3>
+
+<p id="totalMed">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Expiring Soon</h3>
+
+<p id="expiringMed">0</p>
+
+</div>
+
+<div class="card">
+
+<h3>Expired</h3>
+
+<p id="expiredMed">0</p>
+
+</div>
+
+</div>
+
+
+<!-- MEDICINE FORM -->
+
+<div class="form-box">
+
+<h2>Add Medicine</h2>
+
+<input type="text" id="name" placeholder="Medicine Name">
+
+<input type="number" id="qty" placeholder="Quantity">
+
+<input type="date" id="expiry">
+
+<button onclick="addMedicine()">Add Medicine</button>
+
+</div>
+ 
+<div id="medicineList" class="medicine-grid"></div>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+<div id="notification" class="notification">
+Medicine added successfully
+</div>
+
+</html>
